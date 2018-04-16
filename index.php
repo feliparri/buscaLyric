@@ -1,10 +1,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="css/style.css">
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/eventos.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
 
 <section class="webdesigntuts-workshop">
-	<form action="" method="">		    
-		<input type="search" placeholder="Buscar letras, listas, audios, etc.">		    	
+	<form action="controller/buscar.class.php" method="" id="buscarForm" name="buscarForm">		    
+		<input type="search" id="valorBuscar" name="valorBuscar" placeholder="Buscar letras, listas, audios, etc.">		    	
 		<button>Buscar</button>
 	</form>
+	<div class="clear"></div>
+	<div class="well status-bar resultados">Resultados</div>
 </section>
+
