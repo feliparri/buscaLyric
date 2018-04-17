@@ -2,6 +2,9 @@
 include('../librerias/rb.php');
 //var_dump($_POST);
 R::setup( 'mysql:host=localhost;dbname=test', 'root', '' );
+$contactos = R::find('contacto', ' nombre LIKE ?', [ '%'.$_POST['valorBuscar'].'%' ] );
+echo json_encode($contactos);
+
 
 //insert
 /*$post = R::dispense( 'contacto' );
@@ -11,8 +14,7 @@ $post->massage = $_POST['massage'];
 $id = R::store( $post );*/
 
 //$contactos= R::find( 'contacto' );
- $contactos = R::find('contacto', ' nombre LIKE ?', [ '%'.$_POST['valorBuscar'].'%' ] );
-echo json_encode($contactos);
+
 /*foreach ($contactos as $key => $contacto) {
 	$contacto->email."\n";
 }*/
